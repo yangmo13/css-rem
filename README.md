@@ -1,6 +1,7 @@
 # css-rem
+用法：直接在main.js中使用 import "@/文件地址"
 
-;(function(win, lib) {
+    ;(function(win, lib) {
     var doc = win.document;
     var docEl = doc.documentElement;
     var metaEl = doc.querySelector('meta[name="viewport"]');
@@ -9,7 +10,6 @@
     var scale = 0;
     var tid;
     var flexible = lib.flexible || (lib.flexible = {});
-
     if (metaEl) {
         console.warn('将根据已有的meta标签来设置缩放比例');
         var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
@@ -120,6 +120,7 @@
         }
         return val;
     }
+    
+    })(window, window['lib'] || (window['lib'] = {}));
 
-})(window, window['lib'] || (window['lib'] = {}));
 
