@@ -76,7 +76,7 @@
         }
     
        
-        var rem = width / 100;
+        var rem = width / 50;
         rem =rem*40/3
         docEl.style.fontSize = rem + 'px';
         flexible.rem = win.rem = rem;
